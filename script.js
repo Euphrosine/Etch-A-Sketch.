@@ -13,6 +13,15 @@ function createGrid() {
     for (let i = 0; i < 16; i++) {
         for (let j = 0; j < 16; j++) {
             const gridSquare = createGridSquare();
+            
+            // Add event listeners for hover effect
+            gridSquare.addEventListener("mouseenter", function () {
+                gridSquare.style.backgroundColor = "black";
+            });
+
+            gridSquare.addEventListener("mouseleave", function () {
+                gridSquare.style.backgroundColor = "";
+            });
             container.appendChild(gridSquare);
         }
     }
